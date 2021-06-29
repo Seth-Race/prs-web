@@ -40,7 +40,7 @@ public class LineItem {
 	public Request getRequest() {
 		return request;
 	}
-	public void setRequestID(Request request) {
+	public void setRequest(Request request) {
 		this.request = request;
 	}
 	public Product getProduct() {
