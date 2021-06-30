@@ -73,10 +73,7 @@ public class LineItemController {
 				lineItemRepo.deleteById(id);
 				if (!recalculateTotal(lineItem.get().getRequest())) {
 					throw new Exception("Issue recalculating total on delete.");
-				} else {
-					throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR,
-							"Exception caught during collection post");
-				}
+				} 
 			
 		
 			} catch (DataIntegrityViolationException dive) {
