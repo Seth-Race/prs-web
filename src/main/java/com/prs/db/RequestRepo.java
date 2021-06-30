@@ -8,7 +8,7 @@ import com.prs.business.Request;
 
 public interface RequestRepo extends CrudRepository<Request, Integer> {
 
-	public List<Request> changeByRequestIDForReview(int id);
+//	public List<Request> changeByRequestIDForReview(int id);
 	
 	public List<Request> findByUserIdNotAndStatus(int id, String status);
 }

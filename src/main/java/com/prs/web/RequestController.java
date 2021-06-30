@@ -69,7 +69,7 @@ public class RequestController {
 	
 	//TR8 Submit for Review
 	@PutMapping("/submit-review")
-	public Request  changeByRequestIDForReview(@RequestBody Request request){
+	public Request  submit(@RequestBody Request request){
 		if (request.getTotal() <= 50) {
 			request.setStatus("Approved");
 			request.setSubmittedDate(LocalDate.now());
@@ -82,7 +82,7 @@ public class RequestController {
 	}
 	
 	@GetMapping("/list-review/{id}")
-	public List<Request> getNot(@PathVariable Integer id) {
+	public List<Request> getNot(@PathVariable int id) {
 		return requestRepo.findByUserIdNotAndStatus(id, "Review");
 	}
 
